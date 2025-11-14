@@ -1,5 +1,4 @@
-require("erickthered")
-
+require("config.lazy")
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
@@ -7,25 +6,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true
-
--- empty setup using defaults
--- require("nvim-tree").setup()
-
--- OR setup with some options
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -47,3 +27,6 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
